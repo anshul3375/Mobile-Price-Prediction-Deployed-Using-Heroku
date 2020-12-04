@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Mobile Price Predictor</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_second">Mobile Price Prediction</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <!-- Mobile Brand Dropdown -->
+                    <select class="form-input align-center" name="mobile-brand">
+                        <option value="none">--- Select a Mobile Brand---</option>
+                        <option value="Name_Apple">Apple</option>
+                        <option value="Name_Asus">Asus</option>
+                        <option value="Name_Google">Google</option>
+                        <option value="Name_HTC">HTC</option>
+                        <option value="Name_Honor">Honor</option>
+                        <option value="Name_Huawei">Huawei</option>
+                        <option value="Name_LG">LG</option>
+                        <option value="Name_Mi">Mi</option>
+                        <option value="Name_Micromax">Micromax</option>
+                        <option value="Name_Moto">Moto</option>
+                        <option value="Name_Motorola">Motorola</option>
+                        <option value="Name_Nokia">Nokia</option>
+                        <option value="Name_OPPO">Oppo</option>
+                        <option value="Name_OnePlus">Oneplus</option>
+                        <option value="Name_Realme">Realme</option>
+                        <option value="Name_Redmi">Redmi</option>
+                        <option value="Name_Samsung">Samsung</option>
+                        <option value="Name_Vivo">Vivo</option>
+                        
+                    </select><br>
+                    <!-- RAM Type Dropdown -->
+                    <select class="form-input align-center" name="ram-type">
+                        <option value="none">--- Select the RAM Size ---</option>
+                        <option value="RAM_2 GB">2 GB</option>
+                        <option value="RAM_3 GB">3 GB</option>
+                        <option value="RAM_4 GB">4 GB</option>
+                        <option value="RAM_6 GB">6 GB</option>
+                        <option value="RAM_8 GB">8 GB</option>
+                        <option value="RAM_12 GB">12 GB</option>
+                        
+                    
+                    </select><br>
+                    <!-- ROM Type Dropdown -->
+                    <select class="form-input align-center" name="rom-type">
+                        <option value="none">--- Select the ROM Size ---</option>
+                        <option value="ROM_32 GB">32 GB</option>
+                        <option value="ROM_64 GB">64 GB</option>
+                        <option value="ROM_128 GB">128 GB</option>
+                        <option value="ROM_256 GB">256 GB</option>
+                        <option value="ROM_512 GB">512 GB</option>
+                        
+                                                
+                        
+                    </select><br>
+                    <input class="form-input" type="text" name="Screen_size_in_inch" placeholder="Screen Size in Inch"><br>
+       
+                   
+                    
+                        
+                    </select><br>
+                    <!-- Rear Camera Type Dropdown -->
+                    <select class="form-input align-center" name="rear_camera_type">
+                        <option value="none">--- Select the Rear Camera MP ---</option>
+                        <option value="Rear_camera_in_MP_12MP">12 MP</option>
+                        <option value="Rear_camera_in_MP_12.3MP">12.3 MP</option>
+                        <option value="Rear_camera_in_MP_13MP">13 MP</option>
+                        <option value="Rear_camera_in_MP_16MP">16 MP</option>
+                        <option value="Rear_camera_in_MP_20MP">20 MP</option>
+                        <option value="Rear_camera_in_MP_24MP">24 MP</option>
+                        <option value="Rear_camera_in_MP_25MP">25 MP</option>
+                        <option value="Rear_camera_in_MP_32MP">32 MP</option>
+                        <option value="Rear_camera_in_MP_48MP">48 MP</option>
+                        <option value="Rear_camera_in_MP_64MP">64 MP</option>
+                        
+                        
+                    </select><br>
+                    <!-- Front Camera Type Dropdown -->
+                    <select class="form-input align-center" name="front_camera_type">
+                        <option value="none">--- Select the Front Camera MP ---</option>
+                        <option value="Front_camera_in_MP_5MP">5 MP</option>
+                        <option value="Front_camera_in_MP_7MP">7 MP</option>
+                        <option value="Front_camera_in_MP_8MP">8 MP</option>
+                        <option value="Front_camera_in_MP_13MP">13 MP</option>
+                        <option value="Front_camera_in_MP_16MP">16 MP</option>
+                        <option value="Front_camera_in_MP_20MP">20 MP</option>
+                        <option value="Front_camera_in_MP_25MP">25 MP</option>
+                        <option value="Front_camera_in_MP_32MP">32 MP</option>
+                        <option value="Front_camera_in_MP_48MP">48 MP</option>
+                        
+                                                
+                        
+                    </select><br>
+                    <input class="form-input" type="text" name="battery_mAh_type" placeholder="Battery mAh "><br>
+                        
+                        
+                        
+                    </select><br>
+                    
+                    
+
+			<input type="submit" class="myButton" value="Predict Price">
+        	</form>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/anshul3375"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/anshul-agarwal-73174ab8/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made by Anshul Agarwal.</p>
+       </div>
+
+    </body>
+</html>
