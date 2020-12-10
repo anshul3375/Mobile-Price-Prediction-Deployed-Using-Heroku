@@ -4,7 +4,7 @@
 • This repository consists of files required to deploy a ___Machine Learning Web App___ created with ___Flask___ on ___Heroku___ platform.
 
 • If you want to view the deployed model, click on the following link:<br />
-Deployed at: _https://ipl-first-innings-score.herokuapp.com_
+Deployed at: _https://mobile--price-prediction.herokuapp.com/_
 
 • The web App is used to predict the price of the smartphone based on the specification and the brand selected.
 
